@@ -33,7 +33,7 @@ export default function Navbar() {
           <li><NavLink to="/works" className={({isActive}) => isActive ? 'active' : ''}>Works</NavLink></li>
           <li><NavLink to="/internship" className={({isActive}) => isActive ? 'active' : ''}>PM VIKAS</NavLink></li>
           <li>
-            <a href="mailto:hussainkmajmal890@gmail.com" className="nav-cta">Hire Me</a>
+            <a href="mailto:adhiyamujeeb@gmail.com" className="nav-cta">Hire Me</a>
           </li>
         </ul>
       </div>
