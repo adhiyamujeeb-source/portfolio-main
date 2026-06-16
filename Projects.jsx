@@ -77,7 +77,7 @@ const projects = [
       <span>
         Reference document for IoT applications. View it here:{' '}
         <a
-          href="https://docs.google.com/document/d/1j7PjpHgefHXXR9Jv2-5_-U5WqsQCKwFMt857QOnHJdc/edit?usp=drive_link"
+          href="https://drive.google.com/file/d/15NtHaKt6n54Az0JcF-dq7_0zQW0LcJUj/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
         >
