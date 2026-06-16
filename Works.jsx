@@ -167,7 +167,7 @@ export default function Works() {
             <h2 className="works-cta-heading">Have a project that could use a curious pair of hands?</h2>
             <p className="works-cta-sub">Open to short builds, lab partnerships, and writing collaborations.</p>
           </div>
-          <a href="mailto:hussainkmajmal890@gmail.com" className="btn btn-primary btn-large">Email me →</a>
+          <a href="mailto:adhiyamujeebs@gmail.com" className="btn btn-primary btn-large">Email me →</a>
         </div>
       </section>
     </main>

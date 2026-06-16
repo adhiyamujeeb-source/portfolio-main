@@ -9,9 +9,9 @@ export default function Footer() {
           <p>Building thoughtful products &amp; experiences.</p>
         </div>
         <div className="footer-links">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="mailto:your@email.com">Email</a>
+          <a href="https://www.linkedin.com/in/adhiya-mujeeb-560021380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/adhiyamujeeb-source" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:adhiyamujeeb@gmail.com">Email</a>
         </div>
         <div className="footer-copy">
           <span>© {new Date().getFullYear()} · Crafted with care</span>
