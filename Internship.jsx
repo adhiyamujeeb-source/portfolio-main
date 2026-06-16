@@ -1025,6 +1025,222 @@ const days = [
       },
     ],
   },
+  {
+    n: '11',
+    accent: 'rust',
+    title: 'Keil, Proteus and SIM8085 Practicals',
+    subtitle: 'Dr. Delly Thomas (Continued)',
+    tags: ['Keil', 'Proteus', 'SIM8085', 'Practicals', 'Tools'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Hands-on practical session focusing on three critical embedded development tools:
+            <strong>Keil µVision</strong>, <strong>Proteus Design Suite</strong>, and{' '}
+            <strong>SIM8085 simulator</strong>. These tools are essential for microprocessor/microcontroller
+            design, simulation, and verification.
+          </p>
+        ),
+      },
+      {
+        label: 'Keil µVision IDE',
+        body: (
+          <>
+            <p>
+              Industry-standard IDE for <strong>ARM Cortex-M</strong> microcontroller development. Provides
+              complete environment for:
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-rust">
+                <h5>Code Editor</h5>
+                <p>Write C/Assembly code with syntax highlighting, debugging symbols, and optimizations.</p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>Compiler/Assembler</h5>
+                <p>Convert source code to machine code. Generates optimized object files for embedded targets.</p>
+              </div>
+              <div className="concept-card c-sage">
+                <h5>Linker & Debugger</h5>
+                <p>Combine modules, manage memory layout. Debug via breakpoints, watch windows, and trace.</p>
+              </div>
+            </div>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Project Structure in Keil</div>
+              <div className="callout-text">
+                <strong>Project</strong> → <strong>Target</strong> → <strong>Source Files</strong> (C,
+                Assembly) + <strong>Header Files</strong> + <strong>Libraries</strong>. Keil handles
+                compilation, optimization flags, and device-specific configurations.
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Proteus Design Suite',
+        body: (
+          <>
+            <p>
+              Comprehensive EDA (Electronic Design Automation) platform for circuit design and mixed-signal
+              simulation. Integrates virtual instruments and real-time processor simulation.
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Module</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>ARES</strong>
+                  </td>
+                  <td>PCB Layout design tool — place components, route traces, manage layers</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>ISIS/VSMDL</strong>
+                  </td>
+                  <td>Schematic capture and virtual simulation — test circuits before hardware</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>VSM</strong>
+                  </td>
+                  <td>Virtual System Modeling — simulate microcontrollers (8051, PIC, AVR, ARM)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Virtual Instruments</strong>
+                  </td>
+                  <td>Oscilloscope, multimeter, logic analyzer, frequency generators</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="callout tip" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Workflow in Proteus</div>
+              <div className="callout-text">
+                Design schematic → Connect MCU + sensors/actuators → Load compiled firmware (HEX file from
+                Keil) → Simulate behavior → Verify output with virtual instruments.
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'SIM8085 Simulator',
+        body: (
+          <>
+            <p>
+              Dedicated simulator for the <strong>Intel 8085 microprocessor</strong> — an 8-bit processor
+              widely used in educational labs. Perfect for learning microprocessor architecture and
+              assembly programming fundamentals.
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-rust">
+                <h5>Register Set</h5>
+                <p>
+                  8-bit general-purpose registers: A, B, C, D, E, H, L. Special registers: SP (Stack
+                  Pointer), PC (Program Counter), Flags.
+                </p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>Addressing Modes</h5>
+                <p>
+                  Immediate, Register, Direct, Indirect, Register Indirect — each supported with dedicated
+                  instructions.
+                </p>
+              </div>
+              <div className="concept-card c-sage">
+                <h5>Memory Visualization</h5>
+                <p>Step through code, inspect memory, observe register changes in real-time during execution.</p>
+              </div>
+            </div>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Example 8085 Assembly Program</div>
+              <div className="callout-text">
+                <code style={{ fontSize: '0.8rem', display: 'block', whiteSpace: 'pre-wrap' }}>
+                  {`MVI A, 05H      ; Load 05 into Accumulator
+MVI B, 03H      ; Load 03 into B
+ADD B           ; A = A + B (result: 08H)
+HLT             ; Halt execution`}
+                </code>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Practical Workflow',
+        body: (
+          <>
+            <p>
+              <strong>Scenario:</strong> Design a temperature sensor interfacing with an ARM microcontroller
+              that displays readings on an LCD.
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Tool</th>
+                  <th>Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <strong>Keil</strong>
+                  </td>
+                  <td>Write firmware: ADC configuration, sensor reading, LCD display code</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <strong>Keil</strong>
+                  </td>
+                  <td>Compile code → generate HEX file with memory layout optimization</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <strong>Proteus</strong>
+                  </td>
+                  <td>Design circuit: MCU + temperature sensor (analog) + LCD module</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <strong>Proteus</strong>
+                  </td>
+                  <td>Load HEX file into virtual MCU → simulate sensor readings → verify LCD output</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <strong>All</strong>
+                  </td>
+                  <td>Debug: fix code, update HEX, re-simulate until behavior is correct</td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        ),
+      },
+      {
+        exercises: [
+          'Create a simple Keil project: write C code to blink an LED using GPIO',
+          'Compile the project and examine the generated HEX/ELF files and memory map',
+          'Design a Proteus circuit: MCU + push button + LED, load the HEX file, simulate button press',
+          'Write an 8085 assembly program in SIM8085: add two numbers, store result in memory',
+          'Step through the 8085 program, observe register and memory changes',
+          'Practice debugging techniques: breakpoints, watch windows, single-stepping',
+        ],
+      },
+      { scribble: 'Hands-on session concluded with tool proficiency assessment' },
+    ],
+  },
 ]
 
 function DayCard({ day, defaultOpen }) {
