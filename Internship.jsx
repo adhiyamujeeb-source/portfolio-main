@@ -1817,6 +1817,259 @@ HLT             ; Halt execution`}
       { scribble: 'Practical lab concluded with topology documentation and troubleshooting scenarios' },
     ],
   },
+  {
+    n: '15',
+    accent: 'gold',
+    title: 'Advanced Cisco Packet Tracer - ACLs and Advanced Routing',
+    subtitle: 'Dr Koppala Guravaiah (Continued)',
+    tags: ['ACL', 'Advanced Routing', 'OSPF', 'Security', 'Packet Tracer'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Advanced concepts in <strong>Cisco Packet Tracer</strong> focusing on network security,
+            dynamic routing protocols, and access control. Topics covered include{' '}
+            <strong>Access Control Lists (ACLs)</strong>, <strong>Open Shortest Path First (OSPF)</strong>
+            routing protocol, and <strong>VLAN implementation</strong>.
+          </p>
+        ),
+      },
+      {
+        label: 'Access Control Lists (ACLs)',
+        body: (
+          <>
+            <p>
+              ACLs are security filters that control traffic flowing in and out of network interfaces.
+              Applied to router interfaces to permit or deny packets based on source/destination IP,
+              protocol type, and port numbers.
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-rust">
+                <h5>Standard ACL</h5>
+                <p>Filters based on source IP address only. Numbered (1-99) or named. Simple but limited.</p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>Extended ACL</h5>
+                <p>
+                  Filters based on source/destination IP, protocol (TCP/UDP), and port numbers. More
+                  granular control. Numbered (100-199) or named.
+                </p>
+              </div>
+            </div>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Example Standard ACL Configuration</div>
+              <div className="callout-text">
+                <code style={{ fontSize: '0.8rem', display: 'block', whiteSpace: 'pre-wrap' }}>
+                  {`access-list 1 permit 192.168.1.0 0.0.0.255
+access-list 1 deny any
+interface FastEthernet0/1
+ ip access-group 1 in`}
+                </code>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Dynamic Routing Protocols',
+        body: (
+          <>
+            <p>
+              Unlike static routing where administrators manually configure routes, dynamic routing
+              protocols automatically discover network topology and adapt to changes. Routers exchange
+              routing information via routing updates.
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Protocol</th>
+                  <th>Type</th>
+                  <th>Metric</th>
+                  <th>Convergence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>OSPF</strong>
+                  </td>
+                  <td>Link-State (IGP)</td>
+                  <td>Cost (bandwidth-based)</td>
+                  <td>Fast</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>RIP v2</strong>
+                  </td>
+                  <td>Distance-Vector (IGP)</td>
+                  <td>Hop Count (max 15)</td>
+                  <td>Slow</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>EIGRP</strong>
+                  </td>
+                  <td>Hybrid (IGP)</td>
+                  <td>Bandwidth, Delay, Reliability</td>
+                  <td>Very Fast</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>BGP</strong>
+                  </td>
+                  <td>Distance-Vector (EGP)</td>
+                  <td>AS Path</td>
+                  <td>Moderate</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">OSPF Configuration Example</div>
+              <div className="callout-text">
+                <code style={{ fontSize: '0.8rem', display: 'block', whiteSpace: 'pre-wrap' }}>
+                  {`router ospf 1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.2.0 0.0.0.255 area 0
+ passive-interface FastEthernet0/1`}
+                </code>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Virtual LANs (VLANs)',
+        body: (
+          <>
+            <p>
+              VLANs logically segment a physical network into multiple broadcast domains. Devices in
+              different VLANs cannot communicate directly without a Layer 3 device (router). Improves
+              security, reduces broadcast traffic, and simplifies network management.
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-sage">
+                <h5>VLAN Trunk</h5>
+                <p>
+                  Link carrying traffic for multiple VLANs. Uses 802.1Q tagging to identify VLAN membership
+                  in frames.
+                </p>
+              </div>
+              <div className="concept-card c-rust">
+                <h5>Access Port</h5>
+                <p>Port connected to end device (PC, printer). Belongs to a single VLAN, no tagging needed.</p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>Inter-VLAN Routing</h5>
+                <p>Router with subinterfaces or separate physical interfaces routes traffic between VLANs.</p>
+              </div>
+            </div>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">VLAN Configuration on Switch</div>
+              <div className="callout-text">
+                <code style={{ fontSize: '0.8rem', display: 'block', whiteSpace: 'pre-wrap' }}>
+                  {`vlan 10
+ name Management
+vlan 20
+ name Sales
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 10`}
+                </code>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Packet Tracer Labs',
+        body: (
+          <>
+            <p>
+              <strong>Lab 1: ACL Implementation</strong>
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              <li>Create extended ACL on router to block HTTP traffic from a specific subnet</li>
+              <li>Apply ACL to interface using Packet Tracer CLI</li>
+              <li>Simulate PDU (ping, web request) and verify filtering behavior</li>
+            </ul>
+            <p>
+              <strong>Lab 2: Dynamic Routing with OSPF</strong>
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              <li>Design multi-area OSPF network (3 areas) with 6 routers</li>
+              <li>Configure OSPF on all routers and verify neighbor relationships</li>
+              <li>Test connectivity and trace OSPF path via Simulation Mode</li>
+              <li>Simulate link failure and observe convergence time</li>
+            </ul>
+            <p>
+              <strong>Lab 3: VLAN and Inter-VLAN Routing</strong>
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6' }}>
+              <li>Create 4 VLANs on switches and assign ports accordingly</li>
+              <li>Configure router with subinterfaces for inter-VLAN routing</li>
+              <li>Assign DHCP servers to each VLAN</li>
+              <li>Verify clients in different VLANs can communicate through router</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        label: 'Advanced Concepts Covered',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Concept</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>NAT (Network Address Translation)</strong>
+                </td>
+                <td>
+                  Translates private IPs to public IPs for internet communication. Protects internal network
+                  structure.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Port Forwarding</strong>
+                </td>
+                <td>Directs external traffic on specific ports to internal servers behind NAT.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>DHCP Snooping</strong>
+                </td>
+                <td>Switch-based security to prevent rogue DHCP servers on the network.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Spanning Tree Protocol (STP)</strong>
+                </td>
+                <td>Prevents loops in switched networks by selectively disabling redundant links.</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        exercises: [
+          'Design and implement a standard ACL to restrict access from one subnet to another',
+          'Configure extended ACL to allow only HTTPS traffic from HR department to server subnet',
+          'Set up OSPF dynamic routing for a multi-building campus network',
+          'Implement VLANs for different departments (IT, HR, Sales) and configure inter-VLAN routing',
+          'Test failover scenarios: remove a link and observe OSPF reconvergence',
+          'Configure NAT on a router and verify internal users can access external services',
+          'Design a network security policy using ACLs and VLANs',
+        ],
+      },
+      { scribble: 'Session completed with comprehensive network design and security exercises' },
+    ],
+  },
 ]
 
 function DayCard({ day, defaultOpen }) {
