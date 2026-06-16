@@ -117,7 +117,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="about-stats">
-            {[['9','Class Sessions Logged'],['4','Projects in Flight'],['3','Faculty Mentors'],['1','IoT Internship']].map(([n,l])=>(
+            {[['10','Class Sessions Logged'],['4','Projects in Flight'],['3','Faculty Mentors'],['1','IoT Internship']].map(([n,l])=>(
               <div className="stat-card" key={l}>
                 <span className="stat-num">{n}</span>
                 <span className="stat-label">{l}</span>

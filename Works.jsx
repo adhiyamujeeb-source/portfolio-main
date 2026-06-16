@@ -11,7 +11,7 @@ const works = [
     summary:
       'Working as an IoT Assistant Intern under the Government of India\'s Pradhan Mantri Vishwakarma Kaushal Samman (PM VIKAS) programme. Attend daily labs and theory sessions across electronics, digital logic, microprocessors, and IoT architecture.',
     contributions: [
-      'Daily class journal — 9 sessions logged across electronics, digital logic, and IoT',
+      'Daily class journal — 10 sessions logged across electronics, digital logic, and IoT',
       'Prototyping small IoT product concepts (Smart-Home + Cybersecurity)',
       '8085 and 8051 lab interfacing — ADC0808, 8255 PPI, LCD link',
       'Documentation and concept maps shared with the cohort',
@@ -167,7 +167,7 @@ export default function Works() {
             <h2 className="works-cta-heading">Have a project that could use a curious pair of hands?</h2>
             <p className="works-cta-sub">Open to short builds, lab partnerships, and writing collaborations.</p>
           </div>
-          <a href="mailto:adhiyamujeebs@gmail.com" className="btn btn-primary btn-large">Email me →</a>
+          <a href="mailto:adhiyamujeeb@gmail.com" className="btn btn-primary btn-large">Email me →</a>
         </div>
       </section>
     </main>
