@@ -244,7 +244,7 @@ const days = [
     n: '04',
     accent: 'sage',
     title: 'IoT Fundamentals & M2M Applications',
-    subtitle: 'Shajulin Sir — 13/04/2026',
+    subtitle: 'Shajulin Sir',
     tags: ['IoT', 'M2M', 'Smart Systems', 'Research'],
     blocks: [
       {
@@ -316,7 +316,7 @@ const days = [
     n: '05',
     accent: 'rust',
     title: 'IoT Product Ideation — Smart Home & Cybersecurity',
-    subtitle: 'Task Session — Day 6 Activity',
+    subtitle: 'Task Session — Activity',
     tags: ['Project', 'Smart Home', 'Cybersecurity', 'IoT'],
     blocks: [
       {
@@ -354,7 +354,7 @@ const days = [
     n: '06',
     accent: 'gold',
     title: 'History of Electronics & Components',
-    subtitle: 'Dr. Vineeth (Wireless Comm.) — 22/05/2026',
+    subtitle: 'Dr. Vineeth (Wireless Comm.) ',
     tags: ['IC Evolution', 'Active/Passive', 'Components', 'Tools'],
     blocks: [
       {
@@ -456,7 +456,7 @@ const days = [
     n: '07',
     accent: 'gold',
     title: 'Digital Electronics — Logic Gates & Boolean Algebra',
-    subtitle: 'Dr. Vineeth — 22/05/2026 (continued)',
+    subtitle: 'Dr. Vineeth (continued)',
     tags: ['Boolean', 'Logic Gates', 'Number Systems', 'K-Map'],
     blocks: [
       {
@@ -942,7 +942,112 @@ const days = [
     ],
   },
 ]
-
+{
+  n: '10',
+  accent: 'sage',
+  title: 'Microprocessors & Microcontrollers in IoT',
+  subtitle: 'Dr. Delly Thomas',
+  tags: ['Microprocessors', 'Microcontrollers', 'IoT', 'Embedded Systems'],
+  blocks: [
+    {
+      label: 'Microprocessor vs Microcontroller',
+      body: (
+        <div className="callout">
+          <div className="callout-label">Key Difference</div>
+          <div className="callout-text">
+            <strong>Microprocessor:</strong> only a CPU on a single chip — needs external RAM,
+            ROM, and I/O ports to function (e.g., Intel 8085, 8086).
+            <br />
+            <br />
+            <strong>Microcontroller:</strong> CPU + RAM + ROM + I/O ports all integrated on one
+            chip — a complete computer system designed for embedded, single-task applications
+            (e.g., 8051, AVR, ESP32).
+          </div>
+        </div>
+      ),
+    },
+    {
+      label: 'Why Microcontrollers Suit IoT',
+      body: (
+        <p>
+          IoT devices need to be <strong>small, low-power, and dedicated</strong> to a specific
+          task — sensing, controlling, or communicating. Microcontrollers integrate everything
+          needed onto one chip, making them cheaper, more power-efficient, and easier to deploy
+          at scale than microprocessor-based systems.
+        </p>
+      ),
+    },
+    {
+      label: 'Common Microcontrollers in IoT',
+      body: (
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th>Microcontroller</th>
+              <th>Notable Feature</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>8051</strong></td>
+              <td>Classic 8-bit MCU, widely used for teaching embedded basics</td>
+            </tr>
+            <tr>
+              <td><strong>Arduino (AVR)</strong></td>
+              <td>Beginner-friendly, large ecosystem, easy prototyping</td>
+            </tr>
+            <tr>
+              <td><strong>ESP32 / ESP8266</strong></td>
+              <td>Built-in Wi-Fi & Bluetooth — ideal for connected IoT nodes</td>
+            </tr>
+            <tr>
+              <td><strong>ARM Cortex-M</strong></td>
+              <td>Higher performance, used in more demanding embedded/IoT products</td>
+            </tr>
+          </tbody>
+        </table>
+      ),
+    },
+    {
+      label: 'Core Components of a Microcontroller',
+      body: (
+        <div className="concept-grid">
+          {[
+            ['CPU', 'Executes instructions and controls overall operation'],
+            ['RAM', 'Temporary storage for variables and running data'],
+            ['ROM/Flash', 'Stores the program code permanently'],
+            ['I/O Ports', 'Interfaces with sensors, actuators, and other devices'],
+            ['Timers/Counters', 'Manage timing operations and event counting'],
+            ['Communication Interfaces', 'UART, SPI, I2C — for sensor & module connectivity'],
+          ].map(([h, p]) => (
+            <div className="concept-card c-sage" key={h}>
+              <h5>{h}</h5>
+              <p>{p}</p>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+    {
+      label: 'Role in IoT Architecture',
+      body: (
+        <p>
+          In a typical IoT system, the microcontroller sits at the <strong>edge</strong> — reading
+          sensor data, performing basic processing, and pushing data to the cloud or a gateway via
+          a communication module. It acts as the bridge between the physical world (sensors,
+          actuators) and the digital network layer.
+        </p>
+      ),
+    },
+    {
+      exercises: [
+        'List the differences between a microprocessor and a microcontroller in a table',
+        'Identify which microcontroller would suit a battery-powered sensor node and explain why',
+        'Sketch a block diagram of an IoT node using a microcontroller, sensor, and Wi-Fi module',
+      ],
+    },
+  ],
+},
 function DayCard({ day, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
   return (
