@@ -1241,6 +1241,582 @@ HLT             ; Halt execution`}
       { scribble: 'Hands-on session concluded with tool proficiency assessment' },
     ],
   },
+  {
+    n: '12',
+    accent: 'sage',
+    title: 'Embedded Systems Fundamentals',
+    subtitle: 'Dr S Venkitesh',
+    tags: ['Embedded Systems', 'Hardware', 'Firmware', 'Real-Time'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Comprehensive introduction to <strong>embedded systems</strong> — computing systems designed
+            for specific tasks with hardware and software integration. Explored the distinction between
+            general-purpose and embedded computing.
+          </p>
+        ),
+      },
+      {
+        label: 'Embedded System Characteristics',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-sage">
+              <h5>Single-Purpose Design</h5>
+              <p>Each embedded system performs a specific task or set of related tasks in a dedicated manner.</p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>Resource Constraints</h5>
+              <p>Limited memory (RAM/Flash), processing power, and energy. Must optimize for efficiency.</p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Real-Time Operation</h5>
+              <p>
+                Strict timing requirements — must respond to events within deadlines. Critical in safety
+                systems.
+              </p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>Hardware-Software Co-design</h5>
+              <p>Firmware tightly coupled to hardware. Cannot be upgraded like general-purpose software.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Hardware Components',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Processor (MCU/SoC)</strong>
+                </td>
+                <td>Core computing element. Executes firmware, manages peripherals.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Memory</strong>
+                </td>
+                <td>
+                  <strong>Flash:</strong> non-volatile firmware storage. <strong>RAM:</strong> volatile runtime
+                  data.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Input Devices</strong>
+                </td>
+                <td>Sensors (temperature, pressure, motion), buttons, switches, ADC converters.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Output Devices</strong>
+                </td>
+                <td>Actuators (motors, relays), LEDs, LCD displays, DAC converters.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Communication Interface</strong>
+                </td>
+                <td>UART, SPI, I2C for local; Ethernet, WiFi, Cellular for remote connectivity.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Power Supply</strong>
+                </td>
+                <td>Battery, mains, or energy harvesting. Voltage regulation essential.</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Firmware Architecture',
+        body: (
+          <>
+            <p>
+              Embedded software organized in layers:
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Layer</th>
+                  <th>Responsibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Bootloader</strong>
+                  </td>
+                  <td>First code executed. Initializes hardware, loads application firmware into RAM.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Kernel/RTOS</strong>
+                  </td>
+                  <td>
+                    Task scheduling, interrupts, context switching. FreeRTOS, RTOS-32, Nucleus popular.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Device Drivers</strong>
+                  </td>
+                  <td>Manage hardware peripherals (UART, SPI, PWM, ADC). Provide abstraction APIs.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Application Code</strong>
+                  </td>
+                  <td>Main logic specific to the system. Uses kernel and driver APIs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        ),
+      },
+      {
+        label: 'Real-Time Constraints',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-rust">
+              <h5>Hard Real-Time</h5>
+              <p>Missing deadline causes system failure. Examples: medical devices, autonomous vehicles.</p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Soft Real-Time</h5>
+              <p>Deadline miss degrades performance but doesn't fail. Examples: multimedia streaming.</p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>Firm Real-Time</h5>
+              <p>Few misses acceptable; persistent failures are problematic. Examples: video conferencing.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        exercises: [
+          'List 10 examples of embedded systems in daily life and identify their single-purpose design',
+          'Draw a block diagram of a typical embedded system showing processor, memory, sensors, actuators',
+          'Research and compare popular microcontrollers: STM32, PIC32, AVR, nRF52',
+          'Explain why real-time operating systems (RTOS) are crucial for embedded systems',
+          'Analyze the firmware layers in a device you own (e.g., microwave, door lock)',
+        ],
+      },
+    ],
+  },
+  {
+    n: '13',
+    accent: 'gold',
+    title: 'Networking and Cloud Basics',
+    subtitle: 'Dr Koppala Guravaiah',
+    tags: ['Networking', 'TCP/IP', 'Cloud', 'IoT Connectivity'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Introduction to <strong>network fundamentals</strong> and <strong>cloud computing</strong> —
+            essential for IoT and modern embedded systems that require remote data transmission and
+            processing.
+          </p>
+        ),
+      },
+      {
+        label: 'Network Architecture',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-gold">
+              <h5>LAN (Local Area Network)</h5>
+              <p>Limited geographic scope. High speed (Ethernet), low latency. Used in offices, homes.</p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>WAN (Wide Area Network)</h5>
+              <p>
+                Large geographic coverage. Connects LANs via ISP infrastructure. Examples: Internet,
+                cellular networks.
+              </p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>WLAN (Wireless LAN)</h5>
+              <p>WiFi standard (IEEE 802.11). Convenient but lower range and speed than wired Ethernet.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'TCP/IP Protocol Stack',
+        body: (
+          <>
+            <p>
+              Standard model for internet communication — <strong>four layers</strong>:
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Layer</th>
+                  <th>Name</th>
+                  <th>Protocols</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <strong>Application</strong>
+                  </td>
+                  <td>HTTP, HTTPS, MQTT, CoAP, DNS, SMTP, FTP</td>
+                  <td>User applications and services</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <strong>Transport</strong>
+                  </td>
+                  <td>TCP (reliable), UDP (fast)</td>
+                  <td>End-to-end communication and flow control</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <strong>Internet</strong>
+                  </td>
+                  <td>IP (IPv4, IPv6), ICMP</td>
+                  <td>Routing and logical addressing</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <strong>Link</strong>
+                  </td>
+                  <td>Ethernet, WiFi, PPP, ARP</td>
+                  <td>Physical transmission and MAC addressing</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Key Concepts</div>
+              <div className="callout-text">
+                <strong>IP Addressing:</strong> 32-bit (IPv4) or 128-bit (IPv6) identifiers.
+                <br />
+                <strong>Ports:</strong> 16-bit identifiers for services on a host (0-65535).
+                <br />
+                <strong>Sockets:</strong> Endpoint of network communication (IP + Port).
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Cloud Computing Basics',
+        body: (
+          <>
+            <p>
+              Cloud computing provides on-demand access to computing resources (compute, storage,
+              networking) over the internet. Three service models:
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-rust">
+                <h5>IaaS</h5>
+                <p>
+                  <strong>Infrastructure as a Service.</strong> Virtual machines, storage, networking. User
+                  manages applications. Examples: AWS EC2, Azure VMs.
+                </p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>PaaS</h5>
+                <p>
+                  <strong>Platform as a Service.</strong> Development environment, databases, tools. User
+                  deploys code. Examples: Heroku, Google Cloud Platform.
+                </p>
+              </div>
+              <div className="concept-card c-sage">
+                <h5>SaaS</h5>
+                <p>
+                  <strong>Software as a Service.</strong> Fully managed applications accessible via browser.
+                  Examples: Salesforce, Office 365, Google Workspace.
+                </p>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'IoT Connectivity Protocols',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Range</th>
+                <th>Power</th>
+                <th>Use Case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>WiFi</strong>
+                </td>
+                <td>~100m</td>
+                <td>High</td>
+                <td>Home/office networks, streaming devices</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Bluetooth/BLE</strong>
+                </td>
+                <td>~100m</td>
+                <td>Low-Medium</td>
+                <td>Wearables, personal area networks</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Cellular (4G/5G)</strong>
+                </td>
+                <td>km</td>
+                <td>Medium-High</td>
+                <td>Wide-area IoT, mobile devices</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>LoRaWAN</strong>
+                </td>
+                <td>km</td>
+                <td>Very Low</td>
+                <td>Long-range, low-power IoT networks</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>NB-IoT</strong>
+                </td>
+                <td>km</td>
+                <td>Low</td>
+                <td>Narrowband cellular for IoT</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        exercises: [
+          'Explain the difference between TCP and UDP, and when to use each',
+          'Design a network architecture for a smart city with thousands of IoT sensors',
+          'Compare cloud providers (AWS, Azure, Google Cloud) based on IoT capabilities',
+          'Write pseudocode for an IoT device connecting to a cloud MQTT broker',
+          'Analyze the security implications of storing sensitive IoT data in the cloud',
+        ],
+      },
+    ],
+  },
+  {
+    n: '14',
+    accent: 'gold',
+    title: 'Cisco Packet Tracer - Network Simulation',
+    subtitle: 'Dr Koppala Guravaiah (Continued)',
+    tags: ['Cisco Packet Tracer', 'Network Simulation', 'Routing', 'Switching'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Hands-on practical session using <strong>Cisco Packet Tracer</strong> — a network simulation
+            tool for designing, building, and troubleshooting network topologies. Essential for learning
+            practical networking concepts.
+          </p>
+        ),
+      },
+      {
+        label: 'Cisco Packet Tracer Overview',
+        body: (
+          <div className="callout">
+            <div className="callout-label">Tool Features</div>
+            <div className="callout-text">
+              <strong>Visual Design:</strong> drag-and-drop network components.
+              <br />
+              <strong>Real-time Simulation:</strong> observe packet flow in real-time.
+              <br />
+              <strong>Device Configuration:</strong> configure routers, switches, devices with CLI and GUI.
+              <br />
+              <strong>Packet Tracer Mode:</strong> trace individual packets through the network.
+              <br />
+              <strong>Multiple Subnets:</strong> design complex multi-network topologies.
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Network Components',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-rust">
+              <h5>Router</h5>
+              <p>
+                Connects multiple networks. Routes packets between subnets using routing tables and IP
+                addresses.
+              </p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Switch</h5>
+              <p>Connects devices within a LAN. Forwards frames based on MAC addresses and VLAN settings.</p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>End Devices</h5>
+              <p>
+                PCs, servers, printers, IP phones. Can be configured with static or DHCP-assigned IP
+                addresses.
+              </p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>Links & Media</h5>
+              <p>Copper Straight-Through (same-device connection), Crossover, Fiber Optic (long distance).</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Practical Network Topology',
+        body: (
+          <>
+            <p>
+              <strong>Scenario:</strong> Design a network for a three-floor office building with separate
+              departments:
+            </p>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Layer</th>
+                  <th>Configuration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Core Layer</strong>
+                  </td>
+                  <td>Central router (Internet connection, 192.168.1.0/24)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Distribution Layer</strong>
+                  </td>
+                  <td>
+                    3 switches (one per floor). Each has its own subnet (192.168.2.0/24, 192.168.3.0/24,
+                    192.168.4.0/24)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Access Layer</strong>
+                  </td>
+                  <td>10-15 PCs per switch, configured with static IPs or DHCP</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="callout" style={{ marginTop: '0.75rem' }}>
+              <div className="callout-label">Connectivity Test</div>
+              <div className="callout-text">
+                Use <strong>Simulation Mode</strong> to send PDU (Protocol Data Unit) packets between PCs
+                on different floors. Observe routing decisions, MAC address resolution via ARP, and packet
+                delivery.
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Configuration Tasks',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Device Type</th>
+                <th>Configuration Steps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Router</strong>
+                </td>
+                <td>
+                  • Assign IP addresses to each interface (e.g., Fa0/0: 192.168.1.1/24, Fa0/1: 192.168.2.1/24)
+                  <br />• Enable interfaces<br />• Configure routing protocol (Static or OSPF)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Switch</strong>
+                </td>
+                <td>
+                  • Assign VLAN IDs to ports<br />• Configure management IP (optional)<br />• Set up trunk
+                  links for inter-switch communication
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>PC/Server</strong>
+                </td>
+                <td>
+                  • Assign static IP or enable DHCP<br />• Set default gateway (router IP)<br />• Configure
+                  DNS server
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Key Networking Concepts Verified',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6' }}>
+            <li>
+              <strong>Subnetting:</strong> Dividing a network into smaller logical networks for better
+              organization.
+            </li>
+            <li>
+              <strong>IP Routing:</strong> Routers forward packets based on destination IP and routing table
+              entries.
+            </li>
+            <li>
+              <strong>MAC Addressing:</strong> Switches use MAC tables to forward frames within a LAN.
+            </li>
+            <li>
+              <strong>ARP (Address Resolution Protocol):</strong> Maps IP addresses to MAC addresses.
+            </li>
+            <li>
+              <strong>DHCP (Dynamic Host Configuration Protocol):</strong> Automatically assigns IP addresses
+              to devices.
+            </li>
+            <li>
+              <strong>DNS (Domain Name System):</strong> Translates domain names to IP addresses.
+            </li>
+          </ul>
+        ),
+      },
+      {
+        exercises: [
+          'Design a small office network with 3 subnets and 15 devices total using Packet Tracer',
+          'Configure routers with static routing and verify connectivity between all subnets',
+          'Simulate a DHCP server and assign dynamic IPs to 10 client devices',
+          'Use Packet Tracer Simulation Mode to trace a packet from a PC on Floor 1 to a server on Floor 3',
+          'Troubleshoot a network failure: identify misconfigured IP, routing issue, or cable problem',
+          'Design a network with VLANs to separate different departments',
+        ],
+      },
+      { scribble: 'Practical lab concluded with topology documentation and troubleshooting scenarios' },
+    ],
+  },
 ]
 
 function DayCard({ day, defaultOpen }) {
