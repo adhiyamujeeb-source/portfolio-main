@@ -68,6 +68,29 @@ const projects = [
       'Bridges latches → flip-flops → counters into one observable artifact — the kind of small build the journal keeps producing.',
   },
   {
+    id: 'iot-applications',
+    title: 'IOT applications',
+    status: 'Reference · Google Doc',
+    accent: 'sage',
+    year: '2026',
+    summary: (
+      <span>
+        Reference document for IoT applications. View it here:{' '}
+        <a
+          href="https://docs.google.com/document/d/1j7PjpHgefHXXR9Jv2-5_-U5WqsQCKwFMt857QOnHJdc/edit?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Doc
+        </a>
+      </span>
+    ),
+    role: 'Documentation · IoT Use Cases',
+    stack: ['IoT', 'Use Cases', 'Documentation'],
+    why:
+      'A shared reference for IoT application ideas, design patterns, and real-world deployment scenarios.',
+  },
+  {
     id: 'iot-class-journal',
     title: 'PM VIKAS Class Journal (this site)',
     status: 'Live · running record',
