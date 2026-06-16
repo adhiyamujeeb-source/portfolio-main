@@ -2846,37 +2846,50 @@ interface FastEthernet0/1
   {
     n: '25',
     accent: 'sage',
-    title: 'Exam Preparation and Review',
+    title: 'Exam on Tinkercad Circuit',
     subtitle: 'Dr Shajulin Benedict',
-    tags: ['Exam', 'Review', 'Practice', 'Assessment'],
+    tags: ['Exam', 'Tinkercad', 'Arduino', 'Simulation'],
     blocks: [
       {
         label: 'Session Overview',
         body: (
           <p>
-            Focused on exam preparation covering all recent topics: cloud computing, networking, Arduino,
-            Tinkercad simulation, and Cisco Packet Tracer.
+            Exam on <strong>Tinkercad circuit</strong>. Prepare one Tinkercad circuit with Arduino code and
+            simulate it successfully.
           </p>
         ),
       },
       {
-        label: 'Exam Format',
+        label: 'Exam Requirements',
         body: (
           <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
-            <li>Multiple choice questions on theory</li>
-            <li>Short answers on tools and concepts</li>
-            <li>Practical problem solving for network and circuit design</li>
+            <li>Prepare one complete Tinkercad circuit using an Arduino board</li>
+            <li>Use Arduino code to control the circuit and validate it in simulation</li>
+            <li>Include at least one sensor or input and one actuator or output element</li>
+            <li>Run the simulation and verify the circuit behavior using Tinkercad tools</li>
           </ul>
+        ),
+      },
+      {
+        label: 'Key Focus Areas',
+        body: (
+          <div className="callout">
+            <div className="callout-label">What was evaluated</div>
+            <div className="callout-text">
+              Circuit design, Arduino coding, sensor-actuator integration, simulation accuracy, and the
+              ability to explain the workflow.
+            </div>
+          </div>
         ),
       },
       {
         label: 'Preparation Tips',
         body: (
           <div className="callout">
-            <div className="callout-label">Study Checklist</div>
+            <div className="callout-label">Tips Before the Exam</div>
             <div className="callout-text">
-              Review key concepts, practice tool workflows, re-run simulations, and revise configuration
-              examples.
+              Practice building Tinkercad circuits, test Arduino sketches in simulation, and verify all
+              component connections before presenting the final design.
             </div>
           </div>
         ),
