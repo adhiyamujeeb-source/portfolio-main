@@ -231,21 +231,20 @@ export default function Portfolio() {
             </div>
 
             <ul className="connect-channels">
-              <li>
-                <a href="mailto:hussainkmajmal890@gmail.com" className="channel-card">
-                  <span className="channel-label">Email</span>
-                  <span className="channel-value">hussainkmajmal890@gmail.com</span>
-                  <span className="channel-arrow">→</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://share.google/VuGkaBeMqVD1TxEt6
-" target="_blank" rel="noreferrer" className="channel-card">
-                  <span className="channel-label">GitHub</span>
-                  <span className="channel-value">@hussainkmajmal786-sketch</span>
-                  <span className="channel-arrow">↗</span>
-                </a>
-              </li>
+             <li>
+  <a href="mailto:adhiyamujeeb@gmail.com" className="channel-card">
+    <span className="channel-label">Email</span>
+    <span className="channel-value">adhiyamujeeb@gmail.com</span>
+    <span className="channel-arrow">→</span>
+  </a>
+</li>
+<li>
+  <a href="https://github.com/adhiyamujeeb-source" target="_blank" rel="noreferrer" className="channel-card">
+    <span className="channel-label">GitHub</span>
+    <span className="channel-value">@adhiyamujeeb-source</span>
+    <span className="channel-arrow">↗</span>
+  </a>
+</li>
               <li>
                 <a href="https://www.linkedin.com/in/adhiya-mujeeb-560021380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="channel-card">
                   <span className="channel-label">LinkedIn</span>
