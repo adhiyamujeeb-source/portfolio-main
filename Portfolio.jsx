@@ -56,9 +56,9 @@ export default function Portfolio() {
         <div className="container hero-inner">
           <div className="hero-eyebrow section-label">*ECE undergraduate *Innovator *Problem solver</div>
           <h1 className="hero-title">
-            <span className="hero-line">Designing</span>
-            <span className="hero-line italic">systems that</span>
-            <span className="hero-line">create impact.</span>
+            <span className="hero-line">Creating technology</span>
+            <span className="hero-line italic">that powers</span>
+            <span className="hero-line">communication and innovation.</span>
           </h1>
           <p className="hero-sub">
             I'm a product thinker with a passion for building tools that solve real problems —
