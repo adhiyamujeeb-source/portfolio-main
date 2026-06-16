@@ -941,17 +941,38 @@ const days = [
       },
     ],
   },
-  
+  {
+    n: '10',
+    accent: 'sage',
+    title: 'Microprocessors & Microcontrollers in IoT',
+    subtitle: 'Dr. Delly Thomas — Day 10',
+    tags: ['Microprocessors', 'Microcontrollers', 'IoT', 'Embedded'],
+    blocks: [
+      {
+        label: 'Session Focus',
+        body: (
+          <p>
+            Introduced the difference between general-purpose microprocessors and embedded microcontrollers,
+            and explained why microcontrollers are the preferred building blocks for IoT edge devices.
+          </p>
+        ),
+      },
+      {
+        label: 'Microprocessor vs Microcontroller',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-sage">
+              <h5>Microprocessor</h5>
               <p>
-                CPU only. Requires external memory, I/O controllers, and support chips. Suited for computers
-                and high-performance processing.
+                CPU only. Requires external memory, I/O controllers, and support chips. Suited for desktop
+                computers and systems that need high compute flexibility.
               </p>
             </div>
             <div className="concept-card c-rust">
               <h5>Microcontroller</h5>
               <p>
-                Single-chip embedded system with CPU, memory, and peripherals. Ideal for IoT endpoints,
-                home automation, and sensor-based controls.
+                Single-chip embedded system with CPU, RAM, flash, and peripherals. Ideal for IoT sensors,
+                actuators, and battery-powered devices.
               </p>
             </div>
           </div>
@@ -963,19 +984,48 @@ const days = [
           <>
             <p>
               Studied the typical IoT node architecture: <strong>sensors</strong> → <strong>MCU</strong> →
-              <strong>communication interface</strong> → <strong>cloud/actions</strong>. A microcontroller acts as
-              the bridge between the physical world and networked systems.
+              <strong>communication interface</strong> → <strong>cloud/actions</strong>. The MCU bridges the
+              physical world with data and automation.
             </p>
             <div className="callout">
               <div className="callout-label">Key Interfaces</div>
               <div className="callout-text">
-                GPIO, ADC, PWM, UART, SPI, I2C, and wireless modules are the most common ways microcontrollers
-                connect to sensors, motors, displays, and networks.
+                GPIO, ADC, PWM, UART, SPI, I2C, and wireless modules connect microcontrollers to sensors,
+                displays, motors, and networks.
               </div>
             </div>
           </>
         ),
       },
+      {
+        label: 'IoT Use Case',
+        body: (
+          <p>
+            Designed an example temperature-monitoring IoT node: the microcontroller reads a sensor, processes
+            data, and forwards results through a wireless interface for cloud logging and alerting.
+          </p>
+        ),
+      },
+      {
+        label: 'Programming & Power',
+        body: (
+          <p>
+            Reviewed firmware concepts such as <strong>interrupts</strong>, <strong>timers</strong>, and
+            <strong>low-power modes</strong> — essential for reliable, battery-friendly IoT systems.
+          </p>
+        ),
+      },
+      {
+        exercises: [
+          'Compare a microprocessor-based system with a microcontroller-based IoT node',
+          'Draw an MCU block diagram showing sensors, communication, and power',
+          'List common embedded interfaces: GPIO, SPI, I2C, UART, ADC',
+          'Explain why microcontrollers are preferred for edge IoT applications',
+        ],
+      },
+    ],
+  },
+]
 
 function DayCard({ day, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
