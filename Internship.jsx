@@ -941,30 +941,7 @@ const days = [
       },
     ],
   },
-  {
-    n: '10',
-    accent: 'sage',
-    title: 'Microprocessors & Microcontrollers in IoT',
-    subtitle: 'Dr. Delly Thomas — Day 10',
-    tags: ['Microprocessors', 'Microcontrollers', 'Embedded IoT', 'Peripherals'],
-    blocks: [
-      {
-        label: 'Session Focus',
-        body: (
-          <p>
-            Explored the foundations of <strong>microprocessors</strong> and <strong>microcontrollers</strong>,
-            and how they form the core of <strong>IoT devices</strong>. The session highlighted the difference
-            between general-purpose CPUs and embedded controllers used for sensors, actuators, and edge
-            intelligence.
-          </p>
-        ),
-      },
-      {
-        label: 'Microprocessor vs Microcontroller',
-        body: (
-          <div className="concept-grid">
-            <div className="concept-card c-sage">
-              <h5>Microprocessor</h5>
+  
               <p>
                 CPU only. Requires external memory, I/O controllers, and support chips. Suited for computers
                 and high-performance processing.
@@ -999,36 +976,6 @@ const days = [
           </>
         ),
       },
-      {
-        label: 'IoT Use Case',
-        body: (
-          <p>
-            Designed an example <strong>IoT temperature monitoring node</strong>: a sensor reads room temperature,
-            the MCU processes the signal, and a wireless module transmits data to the cloud for monitoring and
-            alerts. This demonstrates a complete embedded IoT workflow.
-          </p>
-        ),
-      },
-      {
-        label: 'Programming & Tools',
-        body: (
-          <p>
-            Discussed firmware development, real-time behaviour, and the importance of <strong>interrupts</strong>,
-            <strong>timers</strong>, and <strong>low-power modes</strong> for battery-powered IoT devices.
-          </p>
-        ),
-      },
-      {
-        exercises: [
-          'Compare a microprocessor-based system with a microcontroller-based IoT node',
-          'Draw the block diagram of an MCU with sensor, communication, and power modules',
-          'List common embedded interfaces: GPIO, SPI, I2C, UART, ADC',
-          'Explain why microcontrollers are preferred for edge IoT applications',
-        ],
-      },
-    ],
-  },
-]
 
 function DayCard({ day, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
