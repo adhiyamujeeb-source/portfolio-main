@@ -2420,6 +2420,508 @@ interface FastEthernet0/1
       { scribble: 'Session concluded with architecture design exercises and cloud platform hands-on labs' },
     ],
   },
+  {
+    n: '17',
+    accent: 'rust',
+    title: 'Introduction to AWS and Docker',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['AWS', 'Docker', 'Cloud', 'Containers'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Introduced the fundamentals of <strong>AWS cloud services</strong> and <strong>Docker</strong>
+            container technology. Covered how cloud infrastructure and containerization accelerate modern
+            application deployment.
+          </p>
+        ),
+      },
+      {
+        label: 'AWS Fundamentals',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-rust">
+              <h5>Compute</h5>
+              <p>EC2 instances, server provisioning, virtual machines in the cloud.</p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Storage</h5>
+              <p>S3 object storage, EBS block storage, and backup strategies.</p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>Networking</h5>
+              <p>VPCs, subnets, security groups, and public/private network design.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Docker Basics',
+        body: (
+          <>
+            <p>
+              Covered Docker images, containers, Dockerfile syntax, and how containers provide consistent
+              runtime environments across machines.
+            </p>
+            <div className="callout">
+              <div className="callout-label">Key Benefits</div>
+              <div className="callout-text">
+                Faster deployment, environment isolation, reproducible builds, and simplified scaling.
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        exercises: [
+          'Create a simple Dockerfile for a Node.js or Python app',
+          'Build and run a Docker container locally',
+          'List AWS services discussed and explain their use cases',
+          'Design a deployment workflow using AWS and Docker together',
+        ],
+      },
+    ],
+  },
+  {
+    n: '18',
+    accent: 'gold',
+    title: 'Cisco Packet Tracer Assignment',
+    subtitle: 'Dr Koppala Guravaiah',
+    tags: ['Assignment', 'Packet Tracer', 'Routing', 'Switching'],
+    blocks: [
+      {
+        label: 'Assignment Goals',
+        body: (
+          <p>
+            Completed a practical assignment in <strong>Cisco Packet Tracer</strong> involving network
+            design, device configuration, and troubleshooting. Focused on implementing real-world
+            network requirements.
+          </p>
+        ),
+      },
+      {
+        label: 'Design Requirements',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+            <li>Build a multi-subnet office network</li>
+            <li>Configure routers and switches with static and dynamic routes</li>
+            <li>Implement VLANs for department separation</li>
+            <li>Verify connectivity using Simulation Mode</li>
+          </ul>
+        ),
+      },
+      {
+        label: 'Verification and Troubleshooting',
+        body: (
+          <div className="callout">
+            <div className="callout-label">Checklist</div>
+            <div className="callout-text">
+              Confirmed IP addressing, gateway settings, routing tables, and packet flow. Resolved issues
+              with misconfigured interfaces and ACL mismatches.
+            </div>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    n: '19',
+    accent: 'sage',
+    title: 'Arduino Programming',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Arduino', 'Programming', 'Microcontrollers', 'Sensors'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Introduced <strong>Arduino programming</strong> and the Arduino IDE. Covered basic sketch
+            structure and how to control digital and analog I/O using code.
+          </p>
+        ),
+      },
+      {
+        label: 'Sketch Structure',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-gold">
+              <h5>setup()</h5>
+              <p>Initialize pins, serial communication, and hardware configurations once at startup.</p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>loop()</h5>
+              <p>Repeatedly executed code that controls runtime behavior and responds to inputs.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'IO Control',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+            <li>DigitalWrite and digitalRead for digital pins</li>
+            <li>analogRead for sensor values</li>
+            <li>analogWrite for PWM motor/LED control</li>
+            <li>Serial.println for debugging and monitoring</li>
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
+    n: '20',
+    accent: 'rust',
+    title: 'Tinkercad Circuits',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Tinkercad', 'Circuits', 'Simulation', 'Electronics'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Hands-on session using <strong>Tinkercad Circuits</strong> to build and simulate electronic
+            circuits on a virtual breadboard.
+          </p>
+        ),
+      },
+      {
+        label: 'Basic Circuit Elements',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-sage">
+              <h5>Resistors and LEDs</h5>
+              <p>Used resistors to limit current and light LEDs safely in Tinkercad simulations.</p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Breadboard Wiring</h5>
+              <p>Practiced placing components and wiring rails correctly to avoid short circuits.</p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>Power Supply</h5>
+              <p>Configured 5V and GND rails for Arduino and circuit components.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Simulation Workflow',
+        body: (
+          <p>
+            Designed circuits, connected components, ran simulations, and observed real-time behavior.
+            Used virtual multimeter and oscilloscope tools to validate signals.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    n: '21',
+    accent: 'gold',
+    title: 'Cisco Packet Tracer Assignment, AOD, DSD, OSPF, MQTT, RIP',
+    subtitle: 'Dr Koppala Guravaiah',
+    tags: ['Packet Tracer', 'OSPF', 'RIP', 'MQTT', 'AOD', 'DSD'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Advanced networking topics with an assignment covering <strong>Cisco Packet Tracer</strong>,
+            routing protocols, and IoT messaging with <strong>MQTT</strong>.
+          </p>
+        ),
+      },
+      {
+        label: 'Routing Protocols',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Use</th>
+                <th>Key Feature</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>OSPF</strong>
+                </td>
+                <td>Link-state routing within an autonomous system</td>
+                <td>Fast convergence, cost-based paths</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>RIP</strong>
+                </td>
+                <td>Distance-vector routing for small networks</td>
+                <td>Simple, hop-count limited to 15</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>AOD</strong>
+                </td>
+                <td>Ad hoc on-demand routing for wireless mesh networks</td>
+                <td>Route discovery on demand</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>DSD</strong>
+                </td>
+                <td>Dynamic source routing for mobile ad hoc networks</td>
+                <td>Source routing via route caches</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'MQTT and IoT Messaging',
+        body: (
+          <p>
+            Covere d the publish/subscribe model of <strong>MQTT</strong>, connecting IoT devices to a broker
+            for telemetry and command messaging.
+          </p>
+        ),
+      },
+      {
+        label: 'Assignment Tasks',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+            <li>Configure routers and switches for OSPF and RIP</li>
+            <li>Integrate MQTT-capable devices with a cloud broker</li>
+            <li>Document network topology and describe protocol behaviour</li>
+            <li>Verify end-to-end connectivity and message flow in Packet Tracer</li>
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
+    n: '22',
+    accent: 'sage',
+    title: 'Sensors Circuits Using Tinkercad',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Sensors', 'Tinkercad', 'IoT', 'Simulation'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Built and simulated sensor circuits in <strong>Tinkercad</strong>, focusing on temperature,
+            light, and motion sensing using virtual components.
+          </p>
+        ),
+      },
+      {
+        label: 'Sensor Examples',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-gold">
+              <h5>Temperature Sensor</h5>
+              <p>Used an analog temperature sensor to read changing voltage values.</p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>Photoresistor</h5>
+              <p>Light sensor that changes resistance with illumination and allows light-based control.</p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>Motion Sensor</h5>
+              <p>Detected movement and generated digital signals for the microcontroller.</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Simulation Workflow',
+        body: (
+          <p>
+            Connected sensors to Arduino and observed live readings. Used serial monitor and virtual
+            instruments to confirm correct readings.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    n: '23',
+    accent: 'rust',
+    title: 'Actuators Circuits Using Tinkercad',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Actuators', 'Tinkercad', 'Motors', 'Relays'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Designed circuits in <strong>Tinkercad</strong> that control actuators such as motors, relays,
+            and buzzers from a microcontroller.
+          </p>
+        ),
+      },
+      {
+        label: 'Actuator Types',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Actuator</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>DC Motor</strong>
+                </td>
+                <td>Rotational actuator for motion and mechanical force.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Relay</strong>
+                </td>
+                <td>Electromechanical switch used to control high-power loads.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Buzzer</strong>
+                </td>
+                <td>Sound output device for alarms and notifications.</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Control Techniques',
+        body: (
+          <p>
+            Used PWM, digital switching, and driver circuits to safely control actuators from Arduino
+            outputs.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    n: '24',
+    accent: 'gold',
+    title: 'Sensors and Actuators Combined Circuits Using Tinkercad',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Sensors', 'Actuators', 'Tinkercad', 'Embedded'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Integrated sensor inputs and actuator outputs in virtual circuits to build complete embedded
+            control systems using <strong>Tinkercad</strong>.
+          </p>
+        ),
+      },
+      {
+        label: 'Example Projects',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+            <li>Temperature sensor controlling a fan motor</li>
+            <li>Light sensor turning LEDs on/off automatically</li>
+            <li>Motion detector activating a buzzer or relay</li>
+          </ul>
+        ),
+      },
+      {
+        label: 'Design Considerations',
+        body: (
+          <div className="callout">
+            <div className="callout-label">Important Notes</div>
+            <div className="callout-text">
+              Ensure correct power levels, use transistors or relays for high-current loads, and validate the
+              logic flow from sensor readings to actuator commands.
+            </div>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    n: '25',
+    accent: 'sage',
+    title: 'Exam Preparation and Review',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Exam', 'Review', 'Practice', 'Assessment'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Focused on exam preparation covering all recent topics: cloud computing, networking, Arduino,
+            Tinkercad simulation, and Cisco Packet Tracer.
+          </p>
+        ),
+      },
+      {
+        label: 'Exam Format',
+        body: (
+          <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+            <li>Multiple choice questions on theory</li>
+            <li>Short answers on tools and concepts</li>
+            <li>Practical problem solving for network and circuit design</li>
+          </ul>
+        ),
+      },
+      {
+        label: 'Preparation Tips',
+        body: (
+          <div className="callout">
+            <div className="callout-label">Study Checklist</div>
+            <div className="callout-text">
+              Review key concepts, practice tool workflows, re-run simulations, and revise configuration
+              examples.
+            </div>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    n: '26',
+    accent: 'rust',
+    title: 'Tinkercad Circuits Review',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Tinkercad', 'Review', 'Circuits', 'Final Practical'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Final practical review session in <strong>Tinkercad</strong> to reinforce circuit design, simulation,
+            and debugging skills.
+          </p>
+        ),
+      },
+      {
+        label: 'Hands-on Practice',
+        body: (
+          <p>
+            Built sample circuits again, verified sensor-actuator interactions, and confirmed component
+            behavior under different conditions.
+          </p>
+        ),
+      },
+      {
+        label: 'Key Takeaways',
+        body: (
+          <div className="callout">
+            <div className="callout-label">Summary</div>
+            <div className="callout-text">
+              Reviewed wiring best practices, simulation troubleshooting, and how virtual prototyping helps
+              design reliable embedded systems.
+            </div>
+          </div>
+        ),
+      },
+    ],
+  },
 ]
 
 function DayCard({ day, defaultOpen }) {
