@@ -54,7 +54,7 @@ export default function Portfolio() {
       <section className="hero">
         <div className="hero-noise" />
         <div className="container hero-inner">
-          <div className="hero-eyebrow section-label">Product Manager · Researcher · Builder</div>
+          <div className="hero-eyebrow section-label">*ECE undergraduate *Innovator *Problem solver</div>
           <h1 className="hero-title">
             <span className="hero-line">Designing</span>
             <span className="hero-line italic">systems that</span>
