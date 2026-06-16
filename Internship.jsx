@@ -2070,6 +2070,356 @@ interface FastEthernet0/1
       { scribble: 'Session completed with comprehensive network design and security exercises' },
     ],
   },
+  {
+    n: '16',
+    accent: 'gold',
+    title: 'Cloud Computing - Architecture and Services',
+    subtitle: 'Dr Shajulin Benedict',
+    tags: ['Cloud Computing', 'AWS', 'Azure', 'GCP', 'Deployment Models'],
+    blocks: [
+      {
+        label: 'Session Overview',
+        body: (
+          <p>
+            Comprehensive exploration of <strong>cloud computing</strong> — on-demand access to computing
+            resources over the internet. Covers deployment models, service models, major cloud providers, and
+            real-world IoT/data applications.
+          </p>
+        ),
+      },
+      {
+        label: 'Cloud Deployment Models',
+        body: (
+          <div className="concept-grid">
+            <div className="concept-card c-rust">
+              <h5>Public Cloud</h5>
+              <p>
+                Resources owned by cloud provider, shared among multiple tenants. Economical, scalable, but
+                lower security control. Examples: AWS, Azure, GCP.
+              </p>
+            </div>
+            <div className="concept-card c-gold">
+              <h5>Private Cloud</h5>
+              <p>
+                Infrastructure hosted on-premises or dedicated provider. High security and control, but higher
+                cost. Suitable for enterprises with sensitive data.
+              </p>
+            </div>
+            <div className="concept-card c-sage">
+              <h5>Hybrid Cloud</h5>
+              <p>
+                Combines public and private clouds. Sensitive workloads on private, scalable workloads on
+                public. Provides flexibility and optimization.
+              </p>
+            </div>
+            <div className="concept-card c-rust">
+              <h5>Community Cloud</h5>
+              <p>
+                Shared infrastructure for organizations with common goals or compliance requirements.
+                Collaborative and cost-effective.
+              </p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        label: 'Cloud Service Models (Recap)',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>What Provider Manages</th>
+                <th>What User Manages</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>IaaS</strong>
+                </td>
+                <td>Hardware, virtualization, storage, networking</td>
+                <td>OS, middleware, application, data</td>
+                <td>AWS EC2, Azure VMs, DigitalOcean</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>PaaS</strong>
+                </td>
+                <td>Infrastructure, OS, middleware, development tools</td>
+                <td>Application code, data</td>
+                <td>Heroku, Google App Engine, AWS Elastic Beanstalk</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>SaaS</strong>
+                </td>
+                <td>Everything — full application stack</td>
+                <td>Configuration, data input</td>
+                <td>Salesforce, Office 365, Slack, Zoom</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>FaaS</strong>
+                </td>
+                <td>Infrastructure, server management, scaling</td>
+                <td>Application logic (functions)</td>
+                <td>AWS Lambda, Azure Functions, Google Cloud Functions</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Major Cloud Providers Comparison',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Compute</th>
+                <th>Storage</th>
+                <th>Database</th>
+                <th>Strength</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>AWS</strong>
+                </td>
+                <td>EC2</td>
+                <td>S3</td>
+                <td>RDS, DynamoDB</td>
+                <td>Market leader, comprehensive services, IoT support</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Azure</strong>
+                </td>
+                <td>Virtual Machines</td>
+                <td>Blob Storage</td>
+                <td>SQL Database, Cosmos DB</td>
+                <td>Enterprise integration, Hybrid cloud, Office 365</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>GCP</strong>
+                </td>
+                <td>Compute Engine</td>
+                <td>Cloud Storage</td>
+                <td>Cloud SQL, Firestore</td>
+                <td>Data analytics, AI/ML, BigQuery</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Cloud Architecture Patterns',
+        body: (
+          <>
+            <p>
+              Common architectural patterns for cloud applications:
+            </p>
+            <div className="concept-grid">
+              <div className="concept-card c-sage">
+                <h5>Multi-Tier Architecture</h5>
+                <p>
+                  Presentation layer, business logic layer, data layer — each on separate servers. Scalable
+                  and maintainable.
+                </p>
+              </div>
+              <div className="concept-card c-rust">
+                <h5>Microservices</h5>
+                <p>
+                  Break application into small, independent services. Each service handles one business
+                  capability. Deployed and scaled independently.
+                </p>
+              </div>
+              <div className="concept-card c-gold">
+                <h5>Serverless</h5>
+                <p>
+                  No server management. Write functions, cloud provider handles scaling. Pay only for
+                  execution time. Ideal for event-driven workloads.
+                </p>
+              </div>
+              <div className="concept-card c-sage">
+                <h5>Containerization</h5>
+                <p>
+                  Package application with dependencies in Docker containers. Run consistently across
+                  environments. Orchestrated by Kubernetes for production.
+                </p>
+              </div>
+            </div>
+          </>
+        ),
+      },
+      {
+        label: 'Cloud Storage Solutions',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Storage Type</th>
+                <th>Use Case</th>
+                <th>Example (AWS)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Object Storage</strong>
+                </td>
+                <td>Files, media, backups. Accessed via HTTP/API. Scalable and durable.</td>
+                <td>S3</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Block Storage</strong>
+                </td>
+                <td>
+                  Virtual disks for EC2 instances. Low latency for databases and applications.
+                </td>
+                <td>EBS</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>File Storage</strong>
+                </td>
+                <td>Network file systems for NFS/SMB access. Shared by multiple instances.</td>
+                <td>EFS</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Data Warehouse</strong>
+                </td>
+                <td>Large-scale analytics. Querying terabytes of data efficiently.</td>
+                <td>Redshift</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'IoT and Cloud Integration',
+        body: (
+          <>
+            <p>
+              Cloud platforms provide critical services for IoT applications:
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.8' }}>
+              <li>
+                <strong>Message Brokers:</strong> MQTT, AMQP for IoT device communication (AWS IoT Core,
+                Azure IoT Hub)
+              </li>
+              <li>
+                <strong>Data Storage:</strong> Time-series databases for sensor data (InfluxDB, Prometheus)
+              </li>
+              <li>
+                <strong>Stream Processing:</strong> Real-time data pipelines (Apache Kafka, AWS Kinesis)
+              </li>
+              <li>
+                <strong>ML/Analytics:</strong> Train models on collected data, predict patterns (AWS SageMaker,
+                Google Vertex AI)
+              </li>
+              <li>
+                <strong>Edge Computing:</strong> Deploy inference at edge to reduce latency (AWS IoT
+                Greengrass, Azure IoT Edge)
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        label: 'Cloud Security Best Practices',
+        body: (
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Practice</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Identity & Access Management (IAM)</strong>
+                </td>
+                <td>Principle of least privilege. Role-based access control (RBAC). MFA enabled.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Encryption</strong>
+                </td>
+                <td>Data at rest (storage), in transit (TLS/SSL). Key management in HSM.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Network Security</strong>
+                </td>
+                <td>VPCs, security groups, NACLs, WAF to filter malicious traffic.</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Monitoring & Logging</strong>
+                </td>
+                <td>
+                  CloudTrail (AWS) logs all API calls. CloudWatch monitors metrics and alerts on anomalies.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Compliance</strong>
+                </td>
+                <td>SOC 2, HIPAA, GDPR certifications. Regular audits and penetration testing.</td>
+              </tr>
+            </tbody>
+          </table>
+        ),
+      },
+      {
+        label: 'Practical Use Cases',
+        body: (
+          <>
+            <p>
+              <strong>IoT Weather Monitoring Station</strong>
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              <li>Sensors (temperature, humidity, pressure) → microcontroller</li>
+              <li>Data sent to cloud via WiFi/cellular</li>
+              <li>Cloud stores in time-series database (DynamoDB, InfluxDB)</li>
+              <li>Web dashboard queries and visualizes trends</li>
+              <li>ML model predicts weather patterns from historical data</li>
+            </ul>
+            <p>
+              <strong>Smart City Traffic Management</strong>
+            </p>
+            <ul style={{ marginLeft: '1.5rem', lineHeight: '1.6' }}>
+              <li>Traffic sensors at intersections → edge devices</li>
+              <li>Real-time traffic data streamed to cloud (Apache Kafka)</li>
+              <li>ML analyzes patterns, predicts congestion</li>
+              <li>Mobile app alerts users of delays, suggests alternate routes</li>
+              <li>City dashboard aggregates data for urban planning</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        exercises: [
+          'Compare pricing models of AWS, Azure, GCP for a typical web application',
+          'Design cloud architecture for an IoT home automation system with redundancy',
+          'Set up a simple microservices application on a cloud platform using containers',
+          'Configure IAM policies to implement least-privilege access for different teams',
+          'Analyze cloud security implications: shared responsibility model, data residency, compliance',
+          'Estimate costs for a data streaming application processing 1 million events per day',
+          'Design a disaster recovery and backup strategy for a mission-critical cloud application',
+        ],
+      },
+      { scribble: 'Session concluded with architecture design exercises and cloud platform hands-on labs' },
+    ],
+  },
 ]
 
 function DayCard({ day, defaultOpen }) {
